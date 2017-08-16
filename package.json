@@ -1,0 +1,22 @@
+{
+  "name": "egeiro",
+  "version": "0.0.1",
+  "description": "seneca intro",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "seneca",
+    "micro-service"
+  ],
+  "author": "Jon Swenson",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "seneca": "^3.4.2"
+  }
+}
