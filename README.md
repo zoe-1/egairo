@@ -8,7 +8,8 @@ A dive into [senecajs](http://senecajs.org).
 * Transport independence:<br/>
   Seneca provides you with transport independence because your business logic does not need <br/>
   to know how messages are transported or which service will get them. This is specified in <br/>
-  the service setup code or configuration. 
+  the service setup code or configuration. Supports both HTTP (HyperText Transfer Protocol) or TCP (Transmission Control Protocol).
+  Uses configurations to switch protocols and application code not affected. 
 * Componentisation:
 
 
@@ -68,6 +69,7 @@ For example, you want your database connection to be established before you try 
 ### plugin logging
 `node plugin-file.js --seneca.log.all`
 `node plugin-file.js --seneca.log.all | grep plugin-name`
+`node math-pin-service.js --seneca.log=plugin:plugin-name`
 
 ### plugin initialization
 To initialize a plugin, you add a special action pattern: `init:<plugin-name>`. <br/>
@@ -90,6 +92,7 @@ Creates a microservice with `seneca.listen()`.
 ### seneca.client()
 Talk to services with `seneca.client`.
 
+### default settings
 Default settings for the client and server (communicate via HTTP over port 10101)
 Both `seneca.client` and `seneca.listen` accept the following parameters:
 * `port`: optional integer; port number. 
@@ -111,4 +114,6 @@ Plus, having penseur coupled to seneca also seems counter productive.  Personall
 to store all db queries in there own module. Keep db connections unique to that module. 
 Then, the module can be used in any application without special stuff like seneca.
 
-
+### helpful resources
+https://github.com/hapijs/chairo/issues/4
+https://github.com/hapijs/chairo/issues/2
