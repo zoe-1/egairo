@@ -1,6 +1,7 @@
 # egeiro
 
 A dive into [senecajs](http://senecajs.org).
+Summary of senecajs' documentation. 
 
 ### Three core features of senecajs
 * Pattern matching:
